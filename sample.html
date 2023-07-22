@@ -8,12 +8,10 @@
       <button type="button">ボタン</button>
 
       <script>
-        function alertMessage() {
-          alert('ボタンをクリックしました');
-        }
-
         const a = document.querySelector('button');
-        a.addEventListener('click', alertMessage);
+        a.addEventListener('click', function() {
+          alert('ボタンをクリックしました');
+        });
       </script>
 
     </div>
