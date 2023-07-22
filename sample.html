@@ -5,17 +5,13 @@
   </head>
   <body>
     <div class="content">
-      <input type="radio" name="radio" value="1" class="radio">1
-      <input type="radio" name="radio" value="1" class="radio">2
+      <input type="text">
 
       <script>
-        const radios = document.querySelectorAll('.radio');
-        for(let radio of radios) {
-          radio.addEventListener('input', function(event) {
-            const value = event.currentTarget;
-            console.log(`${value}がチェックされました。`);
-          });
-        }
+        const inp = document.querySelector('input');
+        inp.addEventListener('keydown', function(event) {
+          console.log(event.key);
+        });
       </script>
 
     </div>
