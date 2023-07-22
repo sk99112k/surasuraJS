@@ -5,13 +5,21 @@
   </head>
   <body>
     <div class="content">
-      <button type="button">ボタン</button>
+      <button type="button" id="button">ボタン</button>
 
       <script>
-        const a = document.querySelector('button');
-        a.addEventListener('click', function() {
-          alert('ボタンをクリックしました');
+        function event() {
+          console.log('関数名が特定できるので削除可能');
+        }
+        button.addEventListener('click', event);
+        button.removeEventListener('click', event);
+        button.addEventListener('click', function() {
+          console.log('関数名が特定できないので削除不可能');
         });
+        button.removeEventListener('click', function() {
+          console.log('関数名が特定できないので削除不可能');
+        });
+    </script>
       </script>
 
     </div>
