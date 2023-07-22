@@ -5,21 +5,14 @@
   </head>
   <body>
     <div class="content">
-      <button type="button" id="button">ボタン</button>
+      <input type="text" id="input">
 
       <script>
-        function event() {
-          console.log('関数名が特定できるので削除可能');
-        }
-        button.addEventListener('click', event);
-        button.removeEventListener('click', event);
-        button.addEventListener('click', function() {
-          console.log('関数名が特定できないので削除不可能');
+        const inp = document.querySelector('#input');
+        inp.addEventListener('input', function(event) {
+          const value = event.currentTarget;
+          console.log(`入力内容${value}`);
         });
-        button.removeEventListener('click', function() {
-          console.log('関数名が特定できないので削除不可能');
-        }); 
-    </script>
       </script>
 
     </div>
