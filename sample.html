@@ -5,12 +5,18 @@
   </head>
   <body>
     <div class="content">
-      <input type="text">
 
+      <div style="width: 200px; height: 100px; background: pink;"></div>
       <script>
-        const inp = document.querySelector('input');
-        inp.addEventListener('keydown', function(event) {
-          console.log(event.key);
+        const div = document.querySelector('div');
+        div.addEventListener('mousemove', function(event) {
+          console.log(`Move: x = ${event.offsetX}, y = ${enevt.offsetY}`);
+        });
+        div.addEventListener('mousedown', function(event) {
+          console.log(`Down: x = ${event.offsetX}, y = ${event.offsetY}`);
+        });
+        div.addEventListener('mouseup', function(event) {
+          console.log(`Up: x = ${event.offsetX}, y = ${event.offsetY}`);
         });
       </script>
 
