@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
   </head>
   <body>
-
-    <button type="button">
-      <span>span要素です</span>ボタン要素です
-    </button>
-      <script>
-        const button = document.querySelector('button');
-        button.addEventListener('click', function(event) {
-          console.log(event.currentTarget);
-          console.log(event.target);
-        });
-      </script>
+    
+    <a href= "https://example.com">リンク</a>
+    <script>
+      function confirmLink(event) {
+        if (confirm('ページ遷移しますか？')) {
+          console.log('実行しました');
+        } else {
+        // preventDefault()を実行すると規定の動作を停止できる
+          event.preventDefault(); 
+          console.log('キャンセルしました');
+        }
+      }
       
-    <!--<span>部分をクリックするとcurrentTargetには<button>要素、targetには<span>要素が格納される。-->
-    <!--常にイベント設定した要素を取得したい場合はcurrentTargetを使い、
-        実際にイベントが発生した要素を取得したいのであればtargetを使う。-->
-
-    </div>
+      const link = document.querySelector('a');
+      link.addEventListener('click', confirmLink);
+      
+    </script>
+    
   </body>
 </html>
