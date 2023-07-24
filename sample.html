@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <div class="content">
-
-      <div class="scroll"></div>
+    
+    <button type="button">ボタン</button>
       <script>
-        const scrollContent = document.querySelector('.scroll');
-        for (let i = 0; i < 1000; i ++) {
-          scrollContent.textContent += `テキスト${i}`;
-        }
-        window.addEventListener('scroll', function() {
-          console.log(`スクロール量は${window.scrollY}pxです`);
-        });
+        const button = document.querySelector('button');
+        button.addEventListener('click', function(event) {
+          const button = event.currentTarget;
+          button.textContent = '変更します';
+        })
       </script>
 
     </div>
