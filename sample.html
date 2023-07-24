@@ -6,14 +6,16 @@
   <body>
 
     <script>
-     function syncAlert() {
-       alert('アラートを表示');
-       console.log('ログを出力');
-     }
-     syncAlert();
-    </script>
-<!--okを押してアラートを閉じない限りは
-    後続のコードが実行されず待機している状態。-->
+    function syncAlert() {
+      setTimeout(function() {
+        alert('アラートを表示');
+      }, 0);
+      console.log('ログを出力');
+    }
+    syncAlert();
+  </script>
+  <!--okを押さなくても'ログを出力'が表示される。
+      setTimeoutが非同期処理であるため、即座に後続のコードを実行する-->
 
   </body>
 </html>
