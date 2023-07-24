@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    
-    <button type="button">ボタン</button>
+
+    <button type="button">
+      <span>span要素です</span>ボタン要素です
+    </button>
       <script>
         const button = document.querySelector('button');
         button.addEventListener('click', function(event) {
-          const button = event.currentTarget;
-          button.textContent = '変更します';
-        })
+          console.log(event.currentTarget);
+          console.log(event.target);
+        });
       </script>
+      
+    <!--<span>部分をクリックするとcurrentTargetには<button>要素、targetには<span>要素が格納される。-->
+    <!--常にイベント設定した要素を取得したい場合はcurrentTargetを使い、
+        実際にイベントが発生した要素を取得したいのであればtargetを使う。-->
 
     </div>
   </body>
