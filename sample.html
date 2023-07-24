@@ -4,23 +4,16 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    
-    <a href= "https://example.com">リンク</a>
+
     <script>
-      function confirmLink(event) {
-        if (confirm('ページ遷移しますか？')) {
-          console.log('実行しました');
-        } else {
-        // preventDefault()を実行すると規定の動作を停止できる
-          event.preventDefault(); 
-          console.log('キャンセルしました');
-        }
-      }
-      
-      const link = document.querySelector('a');
-      link.addEventListener('click', confirmLink);
-      
+     function syncAlert() {
+       alert('アラートを表示');
+       console.log('ログを出力');
+     }
+     syncAlert();
     </script>
-    
+<!--okを押してアラートを閉じない限りは
+    後続のコードが実行されず待機している状態。-->
+
   </body>
 </html>
