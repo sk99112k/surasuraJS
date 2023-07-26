@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
   </head>
   <body>
-
-    <div class="result"> </div>
-
+    <div class="result"></div>
     <script>
       fetch('http://127.0.0.1:5500/15/sample.json').then(function (result) {
         return result.json();
@@ -15,6 +15,5 @@
         result.textContent = json.text;
       });
     </script>
-
   </body>
 </html>
