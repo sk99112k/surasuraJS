@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountUp</title>
+  </head>
+  <body>
+    <div class="counter">0</div>
+    <button class="countup" type="button">+1</button>
+    
+    <script>
+      const countupButton = document.querySelector('.countup') /* <.countup>を指定 */
+      countupButton.addEventListener('click', function() { /* <.countup>をclickした時に */
+        const counter = document.querySelector('.counter'); /* <.counter>のtextが */
+        const count = parseInt(counter.textContent);
+        if (count > 9) {
+          window.alert('10です。これ以上増えません')
+        } else {
+          counter.textContent = count + 1; /* "+1"ずつ増える */
+        }
+      })
+    </script>
+  </body>
+</html>
